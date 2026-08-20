@@ -1,7 +1,5 @@
 package jp.tonbiattack.debuglab.token;
 
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
 import java.util.Set;
 
 /**
@@ -15,7 +13,7 @@ public class CallbackTokenVerifier {
 
     public TokenOutcome verifyQuery(String query) {
         String rawToken = query.substring("token=".length());
-        String token = URLDecoder.decode(rawToken, StandardCharsets.UTF_8);
+        String token = rawToken;
         if (!acceptedTokens.contains(token)) {
             return TokenOutcome.REJECTED;
         }
