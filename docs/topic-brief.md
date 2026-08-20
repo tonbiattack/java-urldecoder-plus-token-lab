@@ -33,7 +33,7 @@
 | 最終観測 | `lastAcceptedToken()`が`"AB+CD"`となり、`acceptedTokenCount()`が`2`であることを別々に検証する。 |
 | 決定性 | 時刻、乱数、並行実行、`sleep`、外部I/Oを使わず、固定の文字列とインメモリ状態だけを使う。 |
 | 固定状態の検証コマンド | `mvn --batch-mode clean test` |
-| バグ状態の確認コマンド | `git checkout <bug-commit>`後に`mvn --batch-mode test -Dtest=CallbackTokenVerifierTest` |
+| バグ状態の確認コマンド | `git checkout bfae7e6`後に`mvn --batch-mode test -Dtest=CallbackTokenVerifierTest` |
 
 ## 仮説
 
